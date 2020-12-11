@@ -7,6 +7,9 @@ module.exports = {
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
+      zIndex: {
+        '-10': '-10',
+      },
     },
   },
   // ...
