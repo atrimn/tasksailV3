@@ -1,9 +1,16 @@
 import 'tailwindcss/tailwind.css'
 import { AppProps } from 'next/app'
 import Layout from '../components/layout'
+import { AuthProvider } from '../context/auth'
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return (<Layout><Component {...pageProps} /></Layout>)
+  return (
+    <AuthProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </AuthProvider>
+  )
 }
 
 export default MyApp

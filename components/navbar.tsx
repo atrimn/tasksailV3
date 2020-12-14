@@ -214,12 +214,12 @@ function ProfileInfo({ user }) {
         </>
       ) : (
         <>
-          <Link href='#'>
+          <Link href='/#'>
             <a className='block text-base font-medium text-indigo-800'>
               Sign in
             </a>
           </Link>
-          <Link href='#'>
+          <Link href='/#'>
             <a className='block text-sm font-medium text-indigo-500'>
               Create account
             </a>

@@ -1,5 +1,8 @@
 import React from 'react'
+import Link from 'next/link'
 import SvgPattern from '../public/topography.svg'
+import BackgroundSVG from '../public/computer-work-4@1x.svg'
+import { Login, CreateAccount } from '../utils/auth'
 
 export default function Authenticate() {
   return (
@@ -7,9 +10,9 @@ export default function Authenticate() {
       <div className='absolute -z-10 w-full overflow-hidden bg-gray-800 h-96'>
         <SvgPattern className='opacity-10 lg:opacity-5' />
       </div>
-      <div className='z-50 rounded-md max-w-7xl mx-auto shadow-sm  '>
+      <div className='z-50 pt-20 rounded-md max-w-7xl mx-auto shadow-sm  '>
         {/* {children} */}
-        <div className='bg-white mt-20 rounded-md overflow-hidden flex mx-4'>
+        <div className='bg-white  rounded-md overflow-hidden flex mx-4'>
           <div className='flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24'>
             <div className='mx-auto w-full max-w-sm lg:w-96'>
               <div>
@@ -22,18 +25,17 @@ export default function Authenticate() {
                   Sign in to your account
                 </h2>
                 <p className='mt-2 text-sm text-gray-600 max-w'>
-                  Or
-                  <a
-                    href='#'
-                    className='font-medium text-indigo-600 hover:text-indigo-500'
-                  >
-                    start your 14-day free trial
-                  </a>
+                  Or{' '}
+                  <Link href='/register'>
+                    <a className='font-medium text-indigo-600 hover:text-indigo-500'>
+                      create an account
+                    </a>
+                  </Link>
                 </p>
               </div>
               <div className='mt-8'>
                 <div>
-                  <div>
+                  {/* <div>
                     <p className='text-sm font-medium text-gray-700'>
                       Sign in with
                     </p>
@@ -95,7 +97,7 @@ export default function Authenticate() {
                         </a>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                   <div className='mt-6 relative'>
                     <div
                       className='absolute inset-0 flex items-center'
@@ -186,14 +188,15 @@ export default function Authenticate() {
             </div>
           </div>
           <div className='hidden lg:block relative w-0 flex-1'>
-            <img
+            {/* <img
               className='absolute inset-0 h-full w-full object-cover'
               src='https://images.unsplash.com/photo-1505904267569-f02eaeb45a4c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1908&q=80'
               alt
-            />
+            /> */}
+            <BackgroundSVG className='flex w-full h-full' />
           </div>
         </div>
       </div>
-      </div>
+    </div>
   )
 }
